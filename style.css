@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +20,12 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(36, 5, 5, 0.9);
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* padding: 5px; */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
   padding: 0.4rem 3rem;
+  transition: height 0.3s ease;
 }
 
 .logo {
@@ -46,6 +45,13 @@ body {
   font-size: 1.4rem;
   display: inline-block;
   vertical-align: middle;
+}
+
+.nav-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar ul {
@@ -128,6 +134,7 @@ body {
   background-color: #ff3a40;
 }
 
+/* Section Styling */
 .section {
   padding: 100px 50px;
   text-align: center;
@@ -196,7 +203,6 @@ body {
 
 .service-card {
   background-color: #121212;
-  /* padding: 20px; */
   margin: 20px;
   border-radius: 10px;
   width: 380px;
@@ -230,6 +236,7 @@ body {
   margin-bottom: 10px;
   color: #f39c12;
 }
+
 .service-card p {
   margin: auto;
   width: 70%;
@@ -251,6 +258,39 @@ body {
   margin: 10px 0;
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons div {
+  background-color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.social-icons div:hover {
+  background-color: #343434;
+}
+
+.social-icons .youtube img {
+  width: 36px;
+}
+.social-icons .insta img {
+  width: 50px;
+}
+.social-icons .facebook img {
+  width: 48px;
+}
+
 /* Footer */
 .footer {
   background-color: #240505;
@@ -261,4 +301,127 @@ body {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Menu icon styling */
+  .menu-icon {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 30px;
+  }
+
+  .menu-icon span {
+    background-color: #f0f0f0;
+    height: 3px;
+    width: 100%;
+    display: block;
+  }
+
+  /* Header / Navbar */
+  .header {
+    flex-direction: column;
+    padding: 0.4rem 1rem;
+    height: auto;
+  }
+
+  .header.menu-open {
+    height: 100vh;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 18px 0;
+  }
+
+  .navbar ul li a {
+    font-size: 1.25rem;
+  }
+
+  .nav-content {
+    flex-direction: column;
+  }
+
+  .nav-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    padding: 1rem;
+    margin-top: 100px;
+  }
+
+  .hero-content h2 {
+    font-size: 3rem;
+    width: 85%;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+
+  .hero-content .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .event-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .event-img {
+    width: 58vw;
+    height: auto;
+  }
+
+  .service-card {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .service-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-content p {
+    font-size: 15px;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
